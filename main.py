@@ -18,8 +18,6 @@ dropdown = dcc.Dropdown(
         value='MTL'
     )
 
-
-
 app.layout = html.Div([
 
     html.H1("Nestle Starbucks Social Media Data", style={'text-align': 'center'}),
