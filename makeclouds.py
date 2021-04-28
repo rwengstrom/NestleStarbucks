@@ -15,7 +15,7 @@ def create_wordcloud(csv_name, mask_png=None):
 
     download('wordnet')
     from nltk.corpus import stopwords
-    from clouds import WordCloud, ImageColorGenerator
+    from wordcloud import WordCloud, ImageColorGenerator
     from nltk.stem import WordNetLemmatizer
     # read and inspect data (optional)
     df1 = pd.read_csv(csv_name)
@@ -116,3 +116,5 @@ def create_wordcloud(csv_name, mask_png=None):
         plt.imshow(w)
         plt.axis('off')
         plt.savefig('tweets_wordcloud.png')
+
+create_wordcloud('twi_march_12col.csv')
