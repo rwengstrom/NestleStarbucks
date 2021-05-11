@@ -1,5 +1,9 @@
-import twint
+### Run these three line below if you're using for the first time:
+import pip
+import nest_asyncio
 import pandas as pd
+nest_asyncio.apply()
+import twint
 
 # Data fetching main function
 def scrape_by_keyword(keywords, since='2021-03-01', until='2021-04-01', limit=100, city=''):
@@ -20,7 +24,7 @@ def scrape_by_keyword(keywords, since='2021-03-01', until='2021-04-01', limit=10
       c.Pandas = True
       c.Stats = True
       c.Lower_case = True
-      c.Hide_output = False
+      c.Hide_output = True
       # run twint
       twint.run.Search(c)
 
